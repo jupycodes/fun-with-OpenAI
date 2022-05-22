@@ -19,6 +19,15 @@ footer {
     text-align: center;
 }
 
+h3 {
+    display: none;
+}
+
+#previousResponses {
+    overflow-y: auto; 
+    height:65vh;
+}
+
 /* For mobile phones: */
 [class*="col-"] {
     width: 100%;

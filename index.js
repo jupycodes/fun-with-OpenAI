@@ -7,7 +7,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(express.static(__dirname + '/frontend'));
 
-app.post('/api', async (request, response) => {
+app.post('/api/answerQuestion', async (request, response) => {
   const api_key = process.env.API_KEY
   const engine = request.body.engine
   const url = `https://api.openai.com/v1/engines/${engine}/completions`
@@ -33,5 +33,5 @@ app.post('/api', async (request, response) => {
 
 
   app.listen(process.env.PORT || 3000, function(){
-    console.log("server is running on port 3000");
+    console.log("server is running");
 }); 
